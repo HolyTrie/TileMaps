@@ -11,6 +11,7 @@ public class KeyboardMoverByTile : KeyboardMover
     [SerializeField] Tilemap tilemap = null;
     //    [SerializeField] TileBase[] allowedTiles = null;
     [SerializeField] AllowedTiles allowedTiles = null;
+    public AllowedTiles AllowedTiles => allowedTiles;
 
     private TileBase TileOnPosition(Vector3 worldPosition)
     {
