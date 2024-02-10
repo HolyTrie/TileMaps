@@ -11,7 +11,8 @@ using UnityEngine.Tilemaps;
 public class KeyboardMoverByTile : KeyboardMover
 {
     [SerializeField] Tilemap tilemap = null;
-    //    [SerializeField] TileBase[] allowedTiles = null;
+    private TileBase TileToDestroy = null;
+    private TileBase TileToPut = null;
     [SerializeField] AllowedTiles allowedTiles = null;
     [SerializeField] DestroyableTiles destroyableTiles = null;
     public AllowedTiles AllowedTiles => allowedTiles;
@@ -35,5 +36,20 @@ public class KeyboardMoverByTile : KeyboardMover
         {
             Debug.Log("You cannot walk on " + tileOnNewPosition + "!");
         }
+
+        //this part of code responsible to switch the tiles//
+        Vector3Int tileNewPosition = tilemap.WorldToCell(newPosition); // converts wolrd position to integer grid position
+        // Check if the tile at the player's position matches the tile to change
+        if (tileOnNewPosition == TileToDestroy)
+        {
+            // Change the tile to the new tile
+            tilemap.SetTile(tileNewPosition, TileToPut);
+
+        }
     }
+
+    public void UpdateTileToDestroy(TileBase other) { this.TileToDestroy = other; }
+    public void UpdateTileToPut(TileBase other) { this.TileToPut = other; }
+
+
 }
