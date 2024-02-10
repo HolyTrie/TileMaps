@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -11,7 +13,9 @@ public class KeyboardMoverByTile : KeyboardMover
     [SerializeField] Tilemap tilemap = null;
     //    [SerializeField] TileBase[] allowedTiles = null;
     [SerializeField] AllowedTiles allowedTiles = null;
+    [SerializeField] DestroyableTiles destroyableTiles = null;
     public AllowedTiles AllowedTiles => allowedTiles;
+    public DestroyableTiles DestroyableTiles => destroyableTiles;
 
     private TileBase TileOnPosition(Vector3 worldPosition)
     {
