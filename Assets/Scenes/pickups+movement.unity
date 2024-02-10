@@ -2899,9 +2899,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efdbe34d317ad9144b08659eace46a88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyableTiles:
+  destroyableTiles:
   - {fileID: 11400000, guid: 546c35550ead79941af5f505fdd175ec, type: 2}
-  ReplacementTiles:
+  replacementTiles:
   - {fileID: 11400000, guid: 149fb7c95775bc842bc8f54055585274, type: 2}
 --- !u!61 &1593763785
 BoxCollider2D:
