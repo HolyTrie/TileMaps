@@ -7,8 +7,11 @@ using UnityEngine.Tilemaps;
  * A graph that represents a tilemap, using only the allowed tiles.
  */
 public class TilemapGraph: IGraph<Vector3Int> {
-    private Tilemap tilemap;
-    private List<TileBase> allowedTiles;
+    private readonly Tilemap tilemap;
+    private readonly List<TileBase> allowedTiles;
+
+    public Tilemap Tilemap => tilemap;
+    public List<TileBase> AllowedTiled => allowedTiles;
 
     public TilemapGraph(Tilemap tilemap, List<TileBase> allowedTiles) {
         this.tilemap = tilemap;
@@ -16,10 +19,10 @@ public class TilemapGraph: IGraph<Vector3Int> {
     }
 
     static Vector3Int[] directions = {
-            new Vector3Int(-1, 0, 0),
-            new Vector3Int(1, 0, 0),
-            new Vector3Int(0, -1, 0),
-            new Vector3Int(0, 1, 0),
+            new(-1, 0, 0),
+            new(1, 0, 0),
+            new(0, -1, 0),
+            new(0, 1, 0),
     };
 
     public IEnumerable<Vector3Int> Neighbors(Vector3Int node) {

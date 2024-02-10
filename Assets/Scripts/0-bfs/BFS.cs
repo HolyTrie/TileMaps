@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Tilemaps;
 
 /**
  * A generic implementation of the BFS algorithm.
@@ -11,9 +14,9 @@ public class BFS {
             NodeType startNode, NodeType endNode, 
             List<NodeType> outputPath, int maxiterations=1000)
     {
-        Queue<NodeType> openQueue = new Queue<NodeType>();
-        HashSet<NodeType> openSet = new HashSet<NodeType>();
-        Dictionary<NodeType, NodeType> previous = new Dictionary<NodeType, NodeType>();
+        Queue<NodeType> openQueue = new();
+        HashSet<NodeType> openSet = new();
+        Dictionary<NodeType, NodeType> previous = new();
         openQueue.Enqueue(startNode);
         openSet.Add(startNode);
         int i; for (i = 0; i < maxiterations; ++i) { // After maxiterations, stop and return an empty path
@@ -47,9 +50,8 @@ public class BFS {
     }
 
     public static List<NodeType> GetPath<NodeType>(IGraph<NodeType> graph, NodeType startNode, NodeType endNode, int maxiterations=1000) {
-        List<NodeType> path = new List<NodeType>();
+        List<NodeType> path = new();
         FindPath(graph, startNode, endNode, path, maxiterations);
         return path;
     }
-
 }

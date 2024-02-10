@@ -31,11 +31,13 @@ public class TilemapCaveGenerator: MonoBehaviour {
 
     [Tooltip("For how long will we pause between each simulation step so we can look at the result?")]
     [SerializeField] float pauseTime = 1f;
-
+    [SerializeField] KeyboardMoverByTile player;
+    [SerializeField] int initialReachableTiles = 100;
     private CaveGenerator caveGenerator;
 
     void Start()  {
         //To get the same random numbers each time we run the script
+        player.enabled = false;
         Random.InitState(100);
 
         caveGenerator = new CaveGenerator(randomFillPercent, gridSize);
@@ -61,9 +63,9 @@ public class TilemapCaveGenerator: MonoBehaviour {
             GenerateAndDisplayTexture(caveGenerator.GetMap());
         }
         Debug.Log("Simulation completed!");
+        player.enabled = true;
+        player.TrySetPlayerPosition(gridSize,initialReachableTiles);
     }
-
-
 
     //Generate a black or white texture depending on if the pixel is cave or wall
     //Display the texture on a plane

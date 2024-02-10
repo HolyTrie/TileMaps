@@ -10,7 +10,6 @@ public class TileUnlocker : MonoBehaviour, IPickupEffect
         var PlayerMover = go.GetComponent<KeyboardMoverByTile>();
         foreach (var tile in unlocksTiles)
         {
-            Debug.Log("THAT'S WHY HES THE GOATTTTT");
             PlayerMover.AllowedTiles.AddTile(tile);
         }
         gameObject.SetActive(false);

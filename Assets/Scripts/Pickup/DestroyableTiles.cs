@@ -3,6 +3,9 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 public class DestroyableTiles : MonoBehaviour
 {
+    /*
+        Wrapper class to manage destroyable tiles and their replacements, just like AllowedTiles.
+    */
     [SerializeField] private List<TileBase> destroyableTiles = new();
     [SerializeField] private List<TileBase> replacementTiles = new();
     public bool ContainsDestroyable(TileBase tile)
