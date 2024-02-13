@@ -1,7 +1,7 @@
 # TileMaps
 Part of week 6 assignment
 
-Code we added/modified can be found -> [github](https://github.com/HolyTrie/TileMaps/tree/main/Assets/Scripts/Pickup) </br> and [github](https://github.com/HolyTrie/TileMaps/blob/main/Assets/Scripts/Pickup/KeyboardMoverByTile.cs)
+Code we added/modified can be found -> [GitHub](https://github.com/HolyTrie/TileMaps/tree/main/Assets/Scripts/Pickup) </br> and [GitHub](https://github.com/HolyTrie/TileMaps/blob/main/Assets/Scripts/Pickup/KeyboardMoverByTile.cs)
 
 ## Part1 - </br>
 Try Demo on [itch.io](https://holytrie.itch.io/tilemapsp-1) </br>
