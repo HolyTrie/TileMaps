@@ -1,7 +1,7 @@
 # TileMaps
 Part of week 6 assignment
 
-Code we added/modified can be found -> [github_source](https://github.com/HolyTrie/TileMaps/tree/main/Assets/Scripts/Pickup) </br>
+Code we added/modified can be found -> [github](https://github.com/HolyTrie/TileMaps/tree/main/Assets/Scripts/Pickup) </br> and [github](https://github.com/HolyTrie/TileMaps/blob/main/Assets/Scripts/Pickup/KeyboardMoverByTile.cs)
 
 ## Part1 - </br>
 Try Demo on [itch.io](https://holytrie.itch.io/tilemapsp-1) </br>
@@ -12,7 +12,7 @@ We added 3 objects the player can pick up that will allow him to do different th
 
 ## Part2 - </br>
 Try Demo on [itch.io](https://holytrie.itch.io/tilemapsp-2) </br>
-We used BFS algorithm to place the player in a correct place that he will be able to reach 100 tiles from his location. </br>
-This also makes sure that the player will not be placed on a mountain. </br>
+We altered the BFS algorithm provided to count unique tiles that are reachable and walkable, </br>
+to make sure that the player will not be placed on a mountain. </br>
 
 
